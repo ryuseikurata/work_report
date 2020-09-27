@@ -1,9 +1,16 @@
-import * as functions from 'firebase-functions';
+import * as admin from "firebase-admin";
+/*
+export * as pubsub from './routes/pubsub';
+*/
+export * as https from './routes/https';
+import { config } from "./config";
 
-// // Start writing Firebase Functions
-// // https://firebase.google.com/docs/functions/typescript
-//
-// export const helloWorld = functions.https.onRequest((request, response) => {
-//   functions.logger.info("Hello logs!", {structuredData: true});
-//   response.send("Hello from Firebase!");
-// });
+
+admin.initializeApp({
+    /*credential: admin.credential.cert(
+      JSON.parse(JSON.stringify(service_account))
+    ),*/
+    credential: admin.credential.cert(
+      JSON.parse(JSON.stringify(config.service_account).replace(/\\\\n/g, "\\n"))
+    ),
+  });
