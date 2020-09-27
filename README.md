@@ -6,4 +6,4 @@
 
 # アーキテクチャ
 
-![]('https://github.com/ryuseikurata/work_report/blob/master/assets/images/docs/daily_will_report_architecture.png)
+![アーキテクチャ](https://github.com/ryuseikurata/work_report/blob/master/assets/images/docs/daily_will_report_architecture.png)
