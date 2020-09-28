@@ -14,9 +14,16 @@ export const config = functions.config() as {
 	admin: {
 		database_url: string;
 	};
-	slack_channel: {
-		me: string;
-		daily_report: string;
-		weekly_report: string;
+	slack: {
+		channel: {
+			me: string;
+			daily_report: string;
+			weekly_report: string;
+		};
+		webhook: {
+			me: string;
+			daily_report: string;
+			weekly_report: string;
+		};
 	};
 };
